@@ -133,12 +133,40 @@
             // 10 - create a new class: public class UserPosts { public User User {get; set}; public List<Post> Posts {get; set} }
             //    - create a new list: List<UserPosts>
             //    - insert in this list each user with his posts only
-
-
+            List<UserPosts> userPost = new List<UserPosts>();
+            var UserPo = from p in allPosts
+                         join u in allUsers
+                         on p.UserId equals u.Id
+                         group u by p;
+            
+            
             // 11 - order users by zip code
+            var orderUsers = allUsers.OrderBy(x => x.Address.Zipcode);
+            foreach(var i in orderUsers)
+            {
+                Console.WriteLine($"Zip:{i.Address.Zipcode}  User: {i.Name}");
+            }
 
 
             // 12 - order users by number of posts
+            var postUser = from a in allPosts
+                           join u in allUsers
+                           on a.UserId equals u.Id
+                           select new
+                           {
+                               user = u,
+                               post = a.Title
+                           };
+
+            var or = postUser.OrderBy(x => x.post.Count());
+            foreach (var i in or)
+            {
+                Console.WriteLine($"Name:{i.user.Name} #Posts:{i.post.Count()}");
+            }
+                           
+
+
+            
         }
 
         private static List<Post> ReadPosts(string file)

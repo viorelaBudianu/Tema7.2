@@ -5,15 +5,18 @@
 
     internal partial class Program
     {
-        public class UserPosts {
+        public class UserPosts
+        {
             public User User { get; set; }
             public List<Post> Posts { get; set; }
 
             //constructor
-            public UserPosts()
-                {
-                
-                }
+            public UserPosts(User user, List<Post> posts)
+            {
+                this.User = user;
+                this.Posts = posts;
+
+            }
 
         }
     }

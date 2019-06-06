@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercises_Action", "Exercis
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise_predicate", "Exercise_predicate\Exercise_predicate.csproj", "{3D9EA53D-7FEC-47EC-81D1-827C94744466}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndreiProblems", "AndreiProblems\AndreiProblems.csproj", "{D503F67D-9D2C-4C66-BF78-1FFE6840009A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AfterLINQCourse", "AfterLINQCourse\AfterLINQCourse.csproj", "{C5E11EC7-736C-4503-B7BA-CDF9C094DF7D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{3D9EA53D-7FEC-47EC-81D1-827C94744466}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D9EA53D-7FEC-47EC-81D1-827C94744466}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D9EA53D-7FEC-47EC-81D1-827C94744466}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D503F67D-9D2C-4C66-BF78-1FFE6840009A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D503F67D-9D2C-4C66-BF78-1FFE6840009A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D503F67D-9D2C-4C66-BF78-1FFE6840009A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D503F67D-9D2C-4C66-BF78-1FFE6840009A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5E11EC7-736C-4503-B7BA-CDF9C094DF7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5E11EC7-736C-4503-B7BA-CDF9C094DF7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5E11EC7-736C-4503-B7BA-CDF9C094DF7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5E11EC7-736C-4503-B7BA-CDF9C094DF7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
