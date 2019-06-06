@@ -38,13 +38,13 @@ namespace Exercises_delegate_func_action_predicate
         // METHODS
         //Problem 3. First before last: Write a method that from a given array of students finds all students whose first name is before its last name alphabetically.Use LINQ query operators.
 
-        public static Student[] FirstBeforeLast(Student[] students)
+        public static Student[] FirstBeforeLast(List<Student> students)
         {
             return students.Where(x => x.FirstName.CompareTo(x.LastName) < 0).ToArray();
         }
 
         //Problem 4. Age range - Write a LINQ query that finds the first name and last name of all students with age between 18 and 24.
-        public static Student[] AgeRange(Student[] students, int low, int high)
+        public static Student[] AgeRange(List<Student> students, int low, int high)
         {
             return students.Where(x => x.Age > low && x.Age < high).ToArray();
         }
