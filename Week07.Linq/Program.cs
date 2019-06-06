@@ -23,10 +23,10 @@
             var emails = allUsers.Select(x => x.Email).ToList();
 
             // 2 - find all posts for users having email ending with ".net".
-            //var UsersPosts = allPosts.Join(users2, 
-            //    aPost => allPosts.UserId, 
-            //    users => users2.Id, 
-            //    (aPosts, users) => new { PostTitle = aPosts.Title, UserName = users.Name, Email = users.Email });
+            var UsersPosts = allPosts.Join(users2,
+                post => post.UserId,
+                user => user.Id,
+                (post, users) => post);
 
 
             var UsersPosts2 = from s in allPosts
@@ -137,9 +137,11 @@
             var UserPo = from p in allPosts
                          join u in allUsers
                          on p.UserId equals u.Id
-                         group u by p;
-            
-            
+                         select new { User = u, Post = p };
+
+           // userPost.Add(UserPo.ToList());
+
+
             // 11 - order users by zip code
             var orderUsers = allUsers.OrderBy(x => x.Address.Zipcode);
             foreach(var i in orderUsers)
