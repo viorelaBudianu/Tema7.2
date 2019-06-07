@@ -137,9 +137,9 @@
             var UserPo = from p in allPosts
                          join u in allUsers
                          on p.UserId equals u.Id
-                         select new { User = u, Post = p };
+                         select new { User=u,post=p};
 
-           // userPost.Add(UserPo.ToList());
+           // userPost.Add(new UserPosts(user,UserPo.ToList());
 
 
             // 11 - order users by zip code

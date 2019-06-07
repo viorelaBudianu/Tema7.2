@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -82,11 +83,12 @@ namespace AfterLINQCourse
         }
     }
 
-    //Problem 7 - Using delegates write a class Timer that can execute certain method at each t seconds.
+    
 
-    public delegate void Timer(int seconds);
+    
 
-    partial class AfterLINQ
+
+        partial class AfterLINQ
     {
         public static Random rnd = new Random();
         public static string GenerateFN06()
@@ -105,6 +107,7 @@ namespace AfterLINQCourse
 
             return FN;
         }
+
         public static string GenerateFN()
         {
             string FN = string.Empty;
@@ -204,6 +207,8 @@ namespace AfterLINQCourse
             {
                 Console.WriteLine(a);
             }
+
+           //Problem 7 e la final                             
 
 
             //Problem 9 - Select only the students that are from group number 2.  Use LINQ query.Order the students by FirstName.
@@ -309,10 +314,14 @@ namespace AfterLINQCourse
             {
                 foreach (var student in group)
                 {
-                    Console.WriteLine(student);
+                    Console.WriteLine(student.FirstName);
                 }
             }
-            }
+
+            //7
+            Timer t = new Timer();
+            t.Print(10);
+        }
 
         private static void Problem12(List<Student> students)
         {

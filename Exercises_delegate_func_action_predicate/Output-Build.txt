@@ -1,0 +1,3 @@
+﻿1>------ Build started: Project: AfterLINQCourse, Configuration: Debug Any CPU ------
+1>  AfterLINQCourse -> C:\Users\vbudianu\Desktop\VIO\7.2\Exercises_delegate_func_action_predicate\AfterLINQCourse\bin\Debug\AfterLINQCourse.exe
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
