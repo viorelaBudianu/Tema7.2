@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Exercises__func
 {
-    class Program
+    class FUNC
     {
         public delegate int SomeOperation(int i, int j);
         static void Main(string[] args)

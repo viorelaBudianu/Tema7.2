@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Exercise_predicate
 {
-    class Program
+    class PredicateProj
     {
         static bool IsUpperCase(string str)
         {

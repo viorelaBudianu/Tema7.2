@@ -14,12 +14,12 @@ namespace Exercises_delegate_func_action_predicate
         public string Tel { get; private set; }
         public string Email { get; private set; }
         public List<double> Marks { get; private set; }
-        public double GroupNumber { get; private set; }
+        public int GroupNumber { get; private set; }
         public int Age { get; private set; }
 
         // CONSTRUCTORS
 
-        public Student(string firstName, string lastName, int age, string FN, string Tel, double group, string email = "")
+        public Student(string firstName, string lastName, int age, string FN, string Tel, int group, string email = "")
         {
             this.FirstName = firstName;
             this.LastName = lastName;
