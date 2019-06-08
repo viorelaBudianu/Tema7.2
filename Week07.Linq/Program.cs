@@ -58,17 +58,35 @@
             var countUsers = from c in UserP
                              group c by c.UserID;
 
-
             foreach (var group in countUsers)
             {
-                
+
                 var count = group.Count();
                 Console.WriteLine($"UserID:{group.Key}---Number of Posts:{count}");
-                foreach(var k in group)
+                foreach (var k in group)
                 {
                     Console.WriteLine($"Post Title:{k.PostTitle}");
                 }
             }
+
+            Dictionary<int, int> userPostsAgg = new Dictionary<int, int>();
+            foreach (var post in allPosts)
+            {
+                var userId = post.UserId;
+
+                if (userPostsAgg.ContainsKey(userId))
+                {
+                    userPostsAgg[userId]++;
+                }
+                else
+                {
+                    userPostsAgg.Add(userId, 1);
+                }
+            }
+
+            var result = allPosts.GroupBy(p => p.UserId).Select(g => new { userID = g.Key, NumberofPosts = g.Count() });
+
+           
             // 4 - find all users that have lat and long negative.
             var LatLong = allUsers.Where(s => s.Address.Geo.Lat.StartsWith("-") && s.Address.Geo.Lng.StartsWith("-"));
             //or
@@ -139,8 +157,18 @@
                          on p.UserId equals u.Id
                          select new { User=u,post=p};
 
-           // userPost.Add(new UserPosts(user,UserPo.ToList());
+            var list = new List<UserPosts>();
 
+            foreach (var user in allUsers)
+            {
+                userPost.Add(new UserPosts
+                {
+                    User = user,
+                    Posts = allPosts.Where(p => p.UserId == user.Id).ToList()
+                });
+            }
+            var first10elem = allUsers.Take(10);
+            
 
             // 11 - order users by zip code
             var orderUsers = allUsers.OrderBy(x => x.Address.Zipcode);
